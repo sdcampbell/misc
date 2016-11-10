@@ -1,4 +1,5 @@
 #! /usr/bin/env python
+# This script filters source IP addresses from a packet capture and outputs IP address and hostname. Used to automate a work task.
 
 import socket
 from scapy.all import *
