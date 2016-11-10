@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+# This script uses yougetsignal.com to perform a port scan for us so that the target doesn't log our IP address.
 # Import our libraries
 import sys
 import requests
