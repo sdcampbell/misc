@@ -68,6 +68,7 @@ if __name__ == '__main__':
             domain = x.rstrip('\r\n')
             IP = getIP(domain)
             if IP == "":
+                writer.writerow([domain,"NotFound"])
                 continue
             else:
                 NetblockOwner = getNetblockCustomerName(IP)
