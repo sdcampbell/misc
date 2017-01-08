@@ -67,14 +67,16 @@ if __name__ == '__main__':
         for x in domains:
             domain = x.rstrip('\r\n')
             IP = getIP(domain)
-            NetblockOwner = getNetblockCustomerName(IP)
-            URL, Title, Server, PoweredBy = getURL(domain)
-            # print domain, IP, NetblockOwner, URL, Title, Server, PoweredBy
-            writer.writerow([domain, IP, NetblockOwner, URL, Title, Server, PoweredBy])
+            if IP == "":
+                continue
+            else:
+                NetblockOwner = getNetblockCustomerName(IP)
+                URL, Title, Server, PoweredBy = getURL(domain)
+                # print domain, IP, NetblockOwner, URL, Title, Server, PoweredBy
+                writer.writerow([domain, IP, NetblockOwner, URL, Title, Server, PoweredBy])
             
         
         domains.close()
         outfile.close()
-
 
 
