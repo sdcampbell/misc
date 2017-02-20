@@ -1,3 +1,6 @@
+#!/bin/bash
+# Batch update Qualys ticket owner.
+# Make sure that you edit line 15 to use your username and password, or better yet use cli variables for them.
 if [ "$#" -ne 2 ]; then
     echo "Illegal number of parameters"
 	echo "Usage: updateticketowner.sh <input file with ticket numbers> <qualys user id>"
